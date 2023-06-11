@@ -29,3 +29,12 @@ $(".sub-menu a").click(function () {
     .find(".right")
     .toggleClass("fa-solid fa-angle-right fa-solid fa-angle-down");
 });
+
+// -----sidebar toggle-----
+$(document).ready(function () {
+  $("#toggleSidebar").click(function () {
+    $(".left-menu").toggleClass("hide");
+    $(".content-wrapper").toggleClass("hide");
+    $(".header-container").toggleClass("hide");
+  });
+});

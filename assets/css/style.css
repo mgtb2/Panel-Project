@@ -289,6 +289,7 @@ input:not(:placeholder-shown) {
   position: sticky;
   margin: 20px 20px 20px 280px;
   border-radius: 7px;
+  transition: 0.5s;
 }
 
 header.header {
@@ -363,9 +364,9 @@ ul.navbar-item {
   font-size: 22px;
   color: #d0d4f1c7;
   margin-left: 10px;
+  vertical-align: middle;
 }
 a.sidebarCollapse {
-  padding-left: 85px;
   color: #999;
   font-size: 15px;
 }
@@ -582,7 +583,7 @@ p.note-time2 {
   align-items: center;
 }
 .left-menu {
-  height: 100vh;
+  height: auto;
   width: 260px;
   position: fixed;
   box-shadow: 3px -1px 19px 1px #efeeee;
@@ -590,7 +591,7 @@ p.note-time2 {
   transition: 0.5s;
   margin-top: 0px;
   background: var(--theme-dark);
-  padding: 14px;
+  padding: 6px 14px;
 }
 nav.animated {
   position: relative;
@@ -645,4 +646,117 @@ ul#sidebar li.active a {
 }
 .sub-menu {
   text-align-last: justify;
+}
+.left-menu.hide {
+  width: 85px;
+  padding: 0;
+}
+/* <======content-wrapper=====> */
+.content-wrapper {
+  display: grid;
+  margin-left: 280px;
+  margin-right: 20px;
+  transition: 0.5s;
+  grid-gap: 22px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.card-box {
+  line-height: 2.5;
+  border-radius: 7px;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 24px 0px;
+}
+.card-box-texts p {
+  color: var(--text-color);
+  font-size: 15px;
+}
+.card-box-num {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.card-box-num p {
+  color: var(--title-text-color);
+  font-size: 22px;
+  font-weight: 500;
+}
+.card-box-positive {
+  color: #28c76f;
+  font-size: 15px;
+}
+.card-box-negative {
+  color: #ea5455;
+  font-size: 15px;
+}
+
+.card-box-icon {
+  display: grid;
+  align-content: center;
+  text-align: center;
+  align-self: flex-start;
+  color: #7367f0;
+  width: 35px;
+  height: 35px;
+  background: #e9e7fd;
+  border-radius: 6px;
+}
+/* <===sidebar toggle====> */
+.header-container.hide {
+  margin-left: 110px;
+}
+.content-wrapper.hide {
+  margin-left: 110px;
+}
+.left-menu.hide .logo-text {
+  display: none;
+}
+.left-menu.hide li span {
+  display: none;
+}
+.left-menu.hide li .fa-angle-right {
+  display: none;
+}
+.left-menu.hide .title-text {
+  display: none;
+}
+.left-menu .hidden-title-text {
+  display: none;
+}
+.left-menu.hide .header-container {
+  margin: 20px 20px 20px 0 !important;
+}
+.left-menu.hide .hidden-title-text {
+  display: block;
+  font-size: 20px;
+  color: #51556c;
+  text-align: center;
+}
+.left-menu.hide .nav-header {
+  display: block;
+  text-align-last: center;
+}
+.left-menu.hide ul#sidebar li a {
+  padding: 5px;
+  text-align-last: center;
+  border-radius: 5px;
+}
+.left-menu.hide ul#sidebar li a i {
+  padding: 0;
+}
+.left-menu.hide ul#sidebar {
+  padding: 0;
+}
+.left-menu.hide .d-flex {
+  display: block !important;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.left-menu.hide .logo {
+  padding: 15px 0;
+}
+.left-menu.hide {
+  padding: 12px;
 }
