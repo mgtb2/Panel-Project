@@ -37,3 +37,7 @@ $(document).ready(function () {
     $(".header-container").toggleClass("hide");
   });
 });
+// -----User List-----
+$(document).ready(function () {
+  $("#table_id").DataTable();
+});
